@@ -1,0 +1,21 @@
+<mat-card>
+    <p><span class="stu">Student</span><span class="log">Login</span></p>
+    <form [formGroup]="loginForm" (ngSubmit)="loginSubmit">
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input formControlName="userName" matInput placeholder="Username">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" formControlName="passWord" matInput placeholder="Password">
+                <button mat-icon-button matSuffix (click)="hide = !hide">
+                    <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button type="submit" color="accent">Login</button>
+        </mat-card-content>
+    </form>
+</mat-card>
